@@ -6,7 +6,7 @@ Maker Media GmbH
 # LED-Laufschrift
 
 ### Laufschrift-Display auf Basis von MAX7219-LEDmatrix-Bausteien und ESP32
-![Picture](https://github.com/MakeMagazinDE/SATANAS/blob/main/LED-Laufschrift.jpg) 
+![Picture](https://github.com/MakeMagazinDE/LED-Laufschrift/blob/main/LED-Laufschrift.jpg) 
 
 Dieses Laufschrift-Display kann im laufenden Betrieb umprogrammiert werden und ist per Web-Oberfläche steuerbar.
 
