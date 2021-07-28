@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+		<title>LED Text Display</title>
+        <link rel="stylesheet" href="style.css"/>
+ 
+	</head>
+	<body> 
+		<a href="javascript:openMenu()" class="menuOpenBtn">&#9776;</a>
+		<div id="menu" class="menu">
+			<a href="javascript:closeMenu()" class="menuCloseBtn">x</a>
+			<h1 class="menuLbl">Menu</h1>
+			<p> </p>
+			<h1 class="menuTop">LED Text Display</h1>
+			<br>			
+            <a class="menuBtn" id="TextBtn" href="main">Statischer Text</a>
+            <a class="menuBtn" id="ScrollBtn" href="submenu1">Scrollen</a>
+            <a class="menuBtn" id="SettingBtn" href="submenu2">Einstellungen</a>
+            <a class="menuBtn" id="APBtn" href="submenu3">AP Einstellungen</a>
+            <a class="menuBtn" id="STABtn" href="submenu4">Client Einstellungen</a>
+			<a class="menuBtn" id="TestBtn" href="submenu5">Displaytest</a>
+			<a class="menuBtn" id="BootBtn" href="submenu6">Bootloader</a>
+			<br><br><br>
+			<h1 class="menuBot">@ PT 2020</h1>
+		</div>
+			
+		
+		<div class="content">
+            <div id="Reboot" class="views grid">
+				<div>
+					<table>
+						<thead>
+							<tr> 
+								<th colspan="1">Neustart</th>
+							</tr>
+						</thead>
+                        
+						<tbody>
+							<tr><td width=370 align="center" >
+							        <b>Automatischer Neustart des Geräts ...</b><br><br>
+							        Bitte Browser schliessen und <br>
+							        nach Neustart wieder öffnen!!!</td></tr>
+                        </tbody>  
+					</table>
+				</div>						
+			</div>
+		</div>	
+	</body>
+    
+	<script>
+		/* Open and close the main menu */
+		function openMenu() 
+		{
+			document.getElementById("menu").classList.add("open");
+			showView("main1");
+		}
+		
+		function closeMenu() 
+		{
+			document.getElementById("menu").classList.remove("open");
+		}		
+	</script>
+</html>

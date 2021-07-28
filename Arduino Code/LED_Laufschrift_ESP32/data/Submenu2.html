@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+		<title>LED Text Display</title>
+        <link rel="stylesheet" href="style.css"/>
+	</head>
+	
+	<body> 
+		<a href="javascript:openMenu()" class="menuOpenBtn">&#9776;</a>
+		<div id="menu" class="menu">
+			<a href="javascript:closeMenu()" class="menuCloseBtn">x</a>
+			<h1 class="menuLbl">Menu</h1>
+			<p> </p>
+			<h1 class="menuTop">LED Text Display</h1>
+			<br>			
+            <a class="menuBtn" id="TextBtn" href="main">Statischer Text</a>
+            <a class="menuBtn" id="ScrollBtn" href="submenu1">Scrollen</a>
+            <b class="menuBtn" id="SettingBtn" href="submenu2">Einstellungen</b>
+            <a class="menuBtn" id="APBtn" href="submenu3">AP Einstellungen</a>
+            <a class="menuBtn" id="STABtn" href="submenu4">Client Einstellungen</a>
+			<a class="menuBtn" id="TestBtn" href="submenu5">Displaytest</a>
+			<a class="menuBtn" id="BootBtn" href="submenu6">Bootloader</a>
+			<br><br><br>
+			<h1 class="menuBot">@ PT 2020</h1>
+		</div>
+
+		<form action="/store2" method=get>
+		    <div class="content">
+                <div id="Submenu2" class="views grid">
+				    <div>
+					
+						<table>
+							<thead>
+								<tr> 
+									<th colspan="2">WLAN Modus</th>
+								</tr>
+							</thead>
+                        
+							<tbody>
+								<tr>						
+									<td width=180>Modus:</td> 
+									<td width=230>  
+										<select class="select" name= "SUB2SELECT1">
+											%SUB2TEXT1%
+										</select>
+									</td>
+								</tr>
+								
+							</tbody>                
+						</table>
+
+						<table>
+							<thead>
+								<tr>
+									<th colspan="2">Startoptionen</th>
+								</tr>
+							</thead>
+                        
+							<tbody>
+								<tr>						
+									<td width=180>Autostart:</td> 
+									<td width=230>  
+										<select class="select" name= "SUB2SELECT2">
+											%SUB2TEXT2%
+										</select>
+									</td>
+								</tr>						
+								<tr>						
+									<td width=180>Speichere aktuelle Einstellungen:</td> 
+									<td width=230>  
+										<select class="select" name= "SUB2SELECT3">
+											%SUB2TEXT3%
+										</select>
+									</td>
+								</tr>								
+                            </tbody>	    
+					    </table>	
+						<table>
+							<thead>
+								<tr> 
+									<th colspan="2">Zurücksetzen</th>
+								</tr>
+							</thead>
+                        
+							<tbody>
+								<tr>
+									<td width=430 colspan="2" style="text-align:center">Beim Zurücksetzen werden die obigen<br />Einstellungen ignoriert!!!</td>
+								</tr>							
+								<tr>						
+									<td width=180>Reset:</td> 
+									<td width=230>  
+										<select class="select" name= "SUB2SELECT4">
+											%SUB2TEXT4%
+										</select>
+									</td>
+								</tr>
+								
+							</tbody>                
+						</table>							
+							
+					    <table class="Table1">
+						    <thead>
+						    </thead>
+                        
+						    <tbody>
+							    <tr>
+								    <td width=400>  
+								        <a type="submit"><button class="button1">Speichern</button></a> 
+								    </td>									
+							    </tr>							
+                            </tbody>
+					    </table>											
+				    </div>				
+				</form>  
+			</div>
+		</div>			
+	</body>		
+    
+	<script>
+		/* Open and close the main menu */
+		function openMenu() 
+		{
+			document.getElementById("menu").classList.add("open");
+			showView("main1");
+		}
+		
+		function closeMenu() 
+		{
+			document.getElementById("menu").classList.remove("open");
+		}
+	</script>
+</html>

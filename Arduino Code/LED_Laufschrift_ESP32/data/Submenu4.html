@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+		<title>LED Text Display</title>
+        <link rel="stylesheet" href="style.css"/>
+
+	</head>
+	
+	<body> 
+		<a href="javascript:openMenu()" class="menuOpenBtn">&#9776;</a>
+		<div id="menu" class="menu">
+			<a href="javascript:closeMenu()" class="menuCloseBtn">x</a>
+			<h1 class="menuLbl">Menu</h1>
+			<p> </p>
+			<h1 class="menuTop">LED Text Display</h1>
+			<br>			
+            <a class="menuBtn" id="TextBtn" href="main">Statischer Text</a>
+            <a class="menuBtn" id="ScrollBtn" href="submenu1">Scrollen</a>
+            <a class="menuBtn" id="SettingBtn" href="submenu2">Einstellungen</a>
+            <a class="menuBtn" id="APBtn" href="submenu3">AP Einstellungen</a>
+            <b class="menuBtn" id="STABtn" href="submenu4">Client Einstellungen</b>
+			<a class="menuBtn" id="TestBtn" href="submenu5">Displaytest</a>
+			<a class="menuBtn" id="BootBtn" href="submenu6">Bootloader</a>
+			<br><br><br>
+			<h1 class="menuBot">@ PT 2020</h1>
+		</div>
+		
+		<form action="/store4" method=get>
+		
+		    <div class="content">
+                <div id="Submenu4" class="views grid">
+				    <div>
+					    <table>
+						    <thead>
+							    <tr> 
+								    <th colspan="2">STA WLAN Einstellungen</th>
+							    </tr>
+						    </thead>
+                        
+						    <tbody>
+							    <tr>
+                                    <td width=180>WLAN SSID:</td>
+								    <td width=200>  
+                                        <input type="text" id="SUB4SSID" name="SUB4SSID" maxlength="20" value="%SUB4VALUE1%">
+								    </td>			
+							    </tr>
+							    <tr>
+                                    <td>Passwort:</td>
+								    <td>  
+                                        <input type="password" id="SUB4PASS" name="SUB4PASS" maxlength="20" value="%SUB4VALUE2%">
+								    </td>							
+							    </tr>	
+							    <tr>
+                                    <td>Hostname:</td>
+								    <td>  
+                                        <input type="text" id="SUB4HOST" name="SUB4HOST" maxlength="20" value="%SUB4VALUE3%">
+								    </td>							
+							    </tr>								
+                            </tbody>    
+					    </table>
+
+					    <table>
+						    <thead>
+							    <tr> 
+								    <th colspan="8">IP Einstellungen</th>
+							    </tr>
+						    </thead>
+                        
+						    <tbody>							
+							    <tr>
+                                    <td width=170>Fixe IP-Adresse:</td>
+								    <td width=45>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4IPA" name="SUB4IPA" value="%SUB4VALUE4%">
+								    </td>
+								    <td width=5>.</td>
+								    <td width=45>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4IPB" name="SUB4IPB" value="%SUB4VALUE5%">
+								    </td>
+								    <td width=5>.</td>
+								    <td width=45>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4IPC" name="SUB4IPC" value="%SUB4VALUE6%">
+								    </td>								
+								    <td width=5>.</td>
+								    <td width=45>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4IPD" name="SUB4IPD" value="%SUB4VALUE7%">
+								    </td>									
+							    </tr>								
+							    <tr>
+                                    <td>Subnetz-Maske:</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4SUA" name="SUB4SUA" value="%SUB4VALUE8%">
+								    </td>
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4SUB" name="SUB4SUB" value="%SUB4VALUE9%">
+								    </td>
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4SUC" name="SUB4SUC" value="%SUB4VALUE10%">
+								    </td>								
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4SUD" name="SUB4SUD" value="%SUB4VALUE11%">
+								    </td>									
+							    </tr>							
+							    <tr>
+                                    <td>Gateway-IP:</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4GWA" name="SUB4GWA" value="%SUB4VALUE12%">
+								    </td>
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4GWB" name="SUB4GWB" value="%SUB4VALUE13%">
+								    </td>
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4GWC" name="SUB4GWC" value="%SUB4VALUE14%">
+								    </td>								
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4GWD" name="SUB4GWD" value="%SUB4VALUE15%">
+								    </td>									
+							    </tr>								
+							    <tr>
+                                    <td>DNS 1:</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D1A" name="SUB4D1A" value="%SUB4VALUE16%">
+								    </td>
+								    <td>.</td>
+								    <td width=45>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D1B" name="SUB4D1B" value="%SUB4VALUE17%">
+								    </td>
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D1C" name="SUB4D1C" value="%SUB4VALUE18%">
+								    </td>								
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D1D" name="SUB4D1D" value="%SUB4VALUE19%">
+								    </td>									
+							    </tr>
+							    <tr>
+                                    <td>DNS 2:</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D2A" name="SUB4D2A" value="%SUB4VALUE20%">
+								    </td>
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D2B" name="SUB4D2B" value="%SUB4VALUE21%">
+								    </td>
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D2C" name="SUB4D2C" value="%SUB4VALUE22%">
+								    </td>								
+								    <td>.</td>
+								    <td>  
+                                        <input type="number" class="input2" min="0" max="255" id="SUB4D2D" name="SUB4D2D" value="%SUB4VALUE23%">
+								    </td>									
+							    </tr>	
+						    </tbody>
+					    </table>
+
+					    <table class="Table1">
+						    <thead>
+						    </thead>
+                        
+						    <tbody>
+							    <tr>
+								    <td width=380>  
+								        <a type="submit"><button class="button6">Speichern</button></a> 
+								    </td>
+							    </tr>							
+                            </tbody>
+					    </table>				       
+				    </div>				
+				</form>  
+			</div>
+		</div>
+	</body>
+    
+	<script>
+		/* Open and close the main menu */
+		function openMenu() 
+		{
+			document.getElementById("menu").classList.add("open");
+			showView("main1");
+		}
+		
+		function closeMenu() 
+		{
+			document.getElementById("menu").classList.remove("open");
+		} 
+	</script>
+</html>

@@ -1,0 +1,425 @@
+
+html 
+{
+    font-family: Verdana, Geneva, sans-serif
+}
+
+.content 
+{
+    margin-left: 200px;
+    transition: 0.5s;
+    margin-top: 1.5em;
+}
+
+/* Grid settings */
+.grid 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid > div:not(.grid) 
+{
+    margin: 0em auto 3em;
+
+}
+
+/* Main menu styling */
+.menuOpenBtn 
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: #111;
+    transition: 0.3s;
+}
+.menuOpenBtn:hover 
+{
+    color: #ff0000;
+}
+.menuLbl 
+{
+    color: #f1f1f1;
+    padding-left: 20px;
+}
+/* Menu top text with blue color */
+.menuTop 
+{
+    color: #818181;
+    padding-left: 30px;
+	font-size: 22px;
+}
+
+.menuBot 
+{
+    color: #f1f1f1;
+    padding-left: 30px;
+	font-size: 14px;
+}
+
+.menu 
+{
+    background-color: #364e59;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    transition: 0.5s;
+}
+.menu a 
+{
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.menu a:hover 
+{
+    color: #f1f1f1;
+	background-color: #446372;
+}
+.menu a.active 
+{
+    background-color: #446372;
+}
+.menu b 
+{
+    padding: 8px 8px 8px 32px;
+    font-size: 20px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+.menu b:hover 
+{
+    color: #f1f1f1;
+	background-color: #446372;
+}
+.menu b.active 
+{
+    background-color: #446372;
+}
+.menu .menuCloseBtn 
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+}
+
+/* Respond to screen sizes in normal */
+@media screen and (max-width: 1100px) 
+{
+    .grid 
+	{
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 600px) 
+{
+    .content 
+	{
+        margin-left: 0px;
+    }
+    .menu 
+	{
+        left: -200px;
+    }
+    .menu.open 
+	{
+        left: 0px;
+    }
+    .menu .menuCloseBtn 
+	{
+        display: block;
+    }
+    .content 
+	{
+        margin-top: 70px;
+    }
+}
+
+/* Other settings for standard table */
+a {
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+	margin-bottom: 20px;
+}
+th, td {
+    padding: 0.5em;
+    background: #ddd;
+}
+td 
+{
+    border-top: 2px solid white;
+}
+
+table.vertical > tbody > tr > td:first-child:not(.stdColor) 
+{
+    background-color: #bbb;
+}
+
+/* Table header */
+th 
+{
+    color: #fff;
+    background-color: #005c94;
+}
+
+
+
+/* Alternative table for button */
+<style type="text/css">
+.Table1
+{
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.Table1 th
+{ 
+    padding: 0.5em;
+    background: #000;
+}
+	/* provide some minimal visual accomodation for IE8 and below */
+.Table1 td
+{
+	background: #b000;
+}
+
+
+
+/* Button Styles */
+/* Button Ein/Aus from page main and buttons Abbrechen/Überschreiben in page restore */
+.button1 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 165px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+/* Button Refresh from page main */
+.button2 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 195px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Button Speichern from page submenu 1 and 6 */
+.button3 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 145px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+
+/* Button Speichern from page submenu 2, 3 and 4 and Testwert from page submenu 4 */
+.button4 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 155px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Not used */
+.button5 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 120px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Button Speichern from page submenu 5 */
+.button6 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 185px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Button Play/Pause from page submenu 3 and Lesen from page submenu 4 */
+.button7 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 42px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Button Schreiben from page submenu 4 */
+.button8 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Button Restore from page submenu 4 */
+.button9 
+{
+  display: inline-block;
+  background-color: #364e59;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 105px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* Standard override for select */
+ select 
+ {
+    width: 188px;
+    padding: 5px;
+    font-size: 16px;
+	color: white;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEwSURBVDiNpdC/S4JRFMbx7/MSuEizq1evCu79Hf0fYqMgLRFBBLXk1Nrk1uhUY0M4NEWQL4FUUFuRkD9eT4uFma9v5t3uec75cO5Vp9M5k7TJ6qcVmFkVeF0Reh8Oh5XAe/8gaXsVycx2SqXSfQCQzWZPgMt/Wu1+v98ACAAkjaIoqgAfS0IDSZVyuTz4xgAKhcK1mR0tI5lZwzl39XUPpsN0Or0P3P4RCs1sd7r2A8tkMj2gCkQJ1ljSlvf+LRYDcM6dA6cJWNM515ot/sIkmaS6pKcY6GU0GtUkWSI22e45iqIaMDtgQL1YLD7Om5uLAeTz+SYw+5SLbrcb+wWKCwDCMPRAG1gHeuPxeMN7fxPXH7sZQC6XuzOzPQAzO1gEAawtCifIsaRiKpU6TOr9BLpOanJYoNPzAAAAAElFTkSuQmCC) no-repeat right #364e59;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+	outline: none;           /* Remove lines in Chrome */
+    background-position-x: 164px;
+	cursor: pointer;
+}
+
+/* Additional hack for Microsoft Explorer */
+select::-ms-expand 
+{
+  display: none;
+}
+ 
+/* Standard override for input */
+input
+{
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+	color: white;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: #364e59;
+}
+
+/* Smaller input field for text */
+.input1
+{
+    width: 420px;
+    padding: 5px;
+    font-size: 16px;
+	color: white;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 68px;
+    background: #364e59;
+	text-align:center
+}
+
+/* Smaller input field for IP-Address */
+.input2
+{
+    width: 35px;
+    padding: 5px;
+    font-size: 16px;
+	color: white;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: #364e59;
+	text-align:center
+}
+
+/* Permanent display of Up/Down buttons in Crome */
+input[type=number]::-webkit-inner-spin-button 
+{
+  opacity: 1;
+}
+
+
+/* Remove up/down buttons */
+input[type="number"] 
+{
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none;
+}
+
